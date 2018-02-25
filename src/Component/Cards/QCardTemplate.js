@@ -12,6 +12,13 @@ const style = {
 
 class QCard extends Component {
 
+  constructor(props) {
+	super(props);
+	this.state = {
+	  value: null,
+	};
+   }
+
   render() {
 	return (
   <Card style={style} >

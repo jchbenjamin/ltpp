@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import Toggle from 'material-ui/Toggle';
 import RaisedButton from 'material-ui/RaisedButton';
 
-class Card0001 extends Component {
+class Card8000 extends Component {
 
   render() {
 	return (
 	<Card style={this.props.style} >
     	<CardHeader
-      		title="Welcome to Cyber Helper"
-      		subtitle="Please read before starting"
+      		title="Signature of Authenticity"
+      		subtitle="Please sign if you agree"
     />
     <CardText>
-     	<p>This is an experimental tool to help you respond to CyberStalking</p>
-	<p>All information is private</p>
+	<p>I attest that all information entered into this application is true and accurate to the best of my recollection.</p>
     </CardText>
     <CardActions>
+      <Toggle label="I agree" />
       <RaisedButton label="ok" onClick={this.props.onClick} />
     </CardActions>
   </Card>
@@ -23,4 +24,4 @@ class Card0001 extends Component {
   }
 }
 
-export default Card0001;
+export default Card8000;

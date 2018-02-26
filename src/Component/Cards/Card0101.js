@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+
+class Card0101 extends Component {
+
+  constructor(props) {
+	super(props);
+	this.create = this.create.bind(this);
+  }
+
+  create(e) {
+	e.preventDefault();
+	let name = this.refs.nameField.input.value;
+	this.props.onClick(name);
+  }
+
+  render() {
+	return (
+	<Card style={this.props.style} >
+    	<CardHeader
+      		title="Basic user info"
+      		subtitle="Name"
+    />
+    <CardText>
+     	<p>What is your name?</p>
+    </CardText>
+    <CardActions>
+      <TextField ref="nameField" />
+      <RaisedButton label="ok" onClick={this.create} />
+    </CardActions>
+  </Card>
+	);
+  }
+}
+
+export default Card0101;
